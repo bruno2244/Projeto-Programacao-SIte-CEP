@@ -1,0 +1,29 @@
+header, .menu {
+
+    background-color: #228B22;
+}
+
+
+.titulo h1::after {
+    content: "";
+    display: inline-block;
+    width: 45px; 
+    height: 45px; 
+    background-image: url('../Imagens/biotecnologia.png'); 
+    background-size: cover; 
+    margin-left: 10px;
+}
+article {
+
+    background-color: #2E8B57;
+}
+
+#formulario, body {
+
+    background-color: #98FB98;
+}
+
+footer {
+
+    background-color: #006400;
+}

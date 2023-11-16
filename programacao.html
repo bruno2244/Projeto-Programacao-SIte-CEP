@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação- Grupo 2</title>
+    <link rel="shortcut icon" href="Imagens/logonova.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="calculadora.css">
+        <script src="calculadora.js" defer></script>
+        <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/programacao.css">
+    <script>
+        window.onload = function() {
+            window.location.href = '#cabeçalho'; 
+        };
+    </script>
+</head>
+<body>
+    <header id="cabeçalho">
+        <div class="inicio">
+            <div class="menu">
+                    <div class="menu-mobile">
+                        <div class="inicio-mobile">
+                            <img id="burger" src="Imagens/menu-aberto.png" alt="Menu" onclick="clickMenu()">
+                            <a href="https://www.cep.pr.gov.br/" target="_blank"><img id="logo" src="Imagens/logonova.png" alt="Logo-CEP"></a>
+                        </div>
+                        <div class="navbar">
+                            <nav>
+                                <ul class="menu-list">
+                                    <li><a href="index.html">Robótica</a></li>
+                                    <li><a href="empreendedorismo.html">Empreendedorismo</a></li>
+                                    <li><a href="biotecnologia.html">Biotecnologia</a></li>
+                                    <li><a href="programacao.html">Programação</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <nav class="bar">
+                        <ul class="menu-list">
+                            <li><a href="index.html">Robótica</a></li>
+                            <li><a href="empreendedorismo.html">Empreendedorismo</a></li>
+                            <li><a href="biotecnologia.html">Biotecnologia</a></li>
+                            <li><a href="programacao.html">Programação</a></li>
+                        </ul>
+                    </nav>
+                    <input type="search" placeholder=" 🔍 O que você procura?">
+            </div>
+        </div>
+        <script>
+            function clickMenu() {
+                
+                let navbar = document.querySelector('.navbar')
+                
+                if(navbar.style.display == 'block') {
+                    
+                    navbar.style.display = 'none'
+                    
+                } else {
+                    
+                    navbar.style.display = 'block'
+                }
+        
+            }
+    
+            
+           
+        </script>
+    <div class="titulo">
+        <h1>
+            PROGRAMAÇÃO
+        </h1>
+        <p>COLÉGIO ESTADUAL DO PARANÁ - 2P</p>
+    </div>
+    </header>
+
+    <main>
+        <article>
+            <div class="texto">
+                <h1>O QUE SÃO TAGS HTML?</h1> <br>
+                <p>As tags são usadas para informar ao navegador a estrutura do site. Ou seja: quando se escreve um código em HTML, as tags serão interpretadas pelo navegador, produzindo assim a estrutura e o conteúdo visual da página.</p>
+            </div>
+            <img src="Imagens/programção_foto.png" alt="Foto Programação">
+        </article> 
+    </main>
+    <section id="tags">
+        <h2>Exemplos Tags HTML</h2>
+        <ul>
+            <li>◉  <strong>class=”…“</strong> – Atribui uma classe ao elemento (uma classe pode ser utilizada para um ou mais elementos);</li>
+            <li>◉  <strong>id=”…“ </strong>– Atribui um id ao elemento (um id deve ser único, ou seja atribuído a um único elemento);</li>
+            <li>◉  <strong>style=”…”</strong> – Permite incluir elementos CSS (estilos) dentro da tag;</li>
+            <li>◉  <strong>lang=”…”</strong> – Define o idioma principal do elemento;</li>
+            <li>◉  <strong>title=”…”</strong> – Define o título do elemento;</li>
+            <li>◉  <strong>alt=”…”</strong> – Define um texto alternativo e, por isso, é muito utilizado em imagens, auxilia nas práticas de SEO;</li>
+            <li>◉  <strong>hidden</strong> – Oculta o elemento;</li>
+            <li>◉  <strong>align=”…”</strong> – Permite definir o padrão de alinhamento desse elemento, como por exemplo: right, center, left e justify;</li>
+            <li>◉  <strong>width=”…”</strong> – Define uma largura para o elemento;</li>
+            <li>◉  <strong>height=”…”</strong> – Define uma altura para o elemento.</li>
+        </ul>
+        <p>Essas são os principais atributos, porém existem diversos outros que devem ser estudados e podem ser utilizados no seu código.</p>
+    </section>
+    <section id="calc">
+        
+        <main class="calculadora" data-theme="dark">
+            <header class="title flex align-center justify-between">
+              <h1>Calculadora</h1>
+            </header>
+            <input type="text" id="input">
+            <div id="keys">
+              <button id="clear">C</button>
+              <button class="charKey" data-value=" ( ">(</button>
+              <button class="charKey" data-value=" ) ">)</button>
+              <button class="charKey" data-value=" / ">/</button>
+              <button class="charKey" data-value="7">7</button>
+              <button class="charKey" data-value="8">8</button>
+              <button class="charKey" data-value="9">9</button>
+              <button class="charKey" data-value=" * ">*</button>
+              <button class="charKey" data-value="4">4</button>
+              <button class="charKey" data-value="5">5</button>
+              <button class="charKey" data-value="6">6</button>
+              <button class="charKey" data-value=" - ">-</button>
+              <button class="charKey" data-value="1">1</button>
+              <button class="charKey" data-value="2">2</button>
+              <button class="charKey" data-value="3">3</button>
+              <button class="charKey" data-value=" + ">+</button>
+              <button class="charKey" data-value="0">0</button>
+              <button class="charKey" data-value=".">.</button>
+              <button class="charKey" data-value=" % ">mod</button>
+              <button id="equal">=</button>
+            </div>
+            <section class="flex align-center justify-between">
+              <button id="copyToClipboard">Copy</button>
+              <input type="text" id="result" disabled>
+            </section>
+          </main>
+    </section>
+    <section id="formulario">
+        <h2>Em caso de dúvidas, preencha o formulário abaixo.</h2>
+        <form action="https://formspree.io/f/meqboypg" method="post">
+            
+            <div class="form">
+                <div class="name-email">
+                    <label for="nome">Seu Nome:</label>
+                    <input type="text" name="name" id="nome" placeholder=" Digite seu nome" required autocomplete="name" autofocus>
+                    <label for="email">Seu E-mail:</label>
+                    <input type="email" name="mail" id="email" placeholder=" Digite seu email" required autocomplete="email">
+                </div>
+                <div class="msg">
+                    <label for="mensagem">Sua Mensagem:</label>
+                    <textarea name="message" id="mensagem" cols="30" rows="10" placeholder="  Digite aqui sua mensagem" required minlength="5" maxlength="100" ></textarea>
+                </div>
+            </div>
+
+            <input type="submit" id="acionar" name="submeter" value="Enviar">
+    
+        </form>
+    </section>
+
+    <footer>
+        <p>Trabalho desenvolvido na disciplina de programação</p> 
+        <p class="cep"><img src="Imagens/logonova.png" alt="Logo-CEP"> <a href="https://www.cep.pr.gov.br/">Colégio Estadual do Paraná</a></p>
+    </footer>
+</body>

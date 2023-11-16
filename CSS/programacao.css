@@ -1,0 +1,54 @@
+header, .menu {
+
+    background-color: #B22222;
+}
+body {
+
+    color: black;
+}
+
+.titulo h1::after {
+    content: "";
+    display: inline-block;
+    width: 45px; 
+    height: 45px; 
+    background-image: url('../Imagens/programacao.png'); 
+    background-size: cover; 
+    margin-left: 10px;
+}
+article {
+
+    background-color: #CD5C5C;
+    
+}
+
+#formulario, body {
+
+    background-color: #FA8072;
+}
+
+#tags {
+
+    background-color: #FF6347;
+    font-family: 'Geologica', sans-serif;
+}
+#tags h2 {
+
+    text-align: center;
+    padding: 20px;
+    font-size: 27px;
+}
+#tags li{
+
+    padding: 15px 0px 15px 50px;
+}
+#tags p {
+
+    margin: auto;
+    padding: 30px;
+    font-size: 17px;
+}
+footer {
+
+    background-color: #A52A2A;
+}

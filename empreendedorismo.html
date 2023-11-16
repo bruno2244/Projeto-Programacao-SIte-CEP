@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empreendedorimo- Grupo 2</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/empreendedorismo.css">
+    <link rel="shortcut icon" href="Imagens/logonova.png" type="image/x-icon">
+    <script>
+        window.onload = function() {
+            window.location.href = '#cabeçalho'; 
+        };
+    </script>
+</head>
+<body>
+    <header id="cabeçalho">
+        <div class="inicio">
+            <div class="menu">
+                    <div class="menu-mobile">
+                        <div class="inicio-mobile">
+                            <img id="burger" src="Imagens/menu-aberto.png" alt="Menu" onclick="clickMenu()">
+                            <a href="https://www.cep.pr.gov.br/" target="_blank"><img id="logo" src="Imagens/logonova.png" alt="Logo-CEP"></a>
+                        </div>
+                        <div class="navbar">
+                            <nav>
+                                <ul class="menu-list">
+                                    <li><a href="index.html">Robótica</a></li>
+                                    <li><a href="empreendedorismo.html">Empreendedorismo</a></li>
+                                    <li><a href="biotecnologia.html">Biotecnologia</a></li>
+                                    <li><a href="programacao.html">Programação</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <nav class="bar">
+                        <ul class="menu-list">
+                            <li><a href="index.html">Robótica</a></li>
+                            <li><a href="empreendedorismo.html">Empreendedorismo</a></li>
+                            <li><a href="biotecnologia.html">Biotecnologia</a></li>
+                            <li><a href="programacao.html">Programação</a></li>
+                        </ul>
+                    </nav>
+                    <input type="search" placeholder=" 🔍 O que você procura?">
+            </div>
+        </div>
+    <script>
+        function clickMenu() {
+            
+            let navbar = document.querySelector('.navbar')
+            
+            if(navbar.style.display == 'block') {
+                
+                navbar.style.display = 'none'
+                
+            } else {
+                
+                navbar.style.display = 'block'
+            }
+    
+        }
+
+        
+       
+    </script>
+    <div class="titulo">
+        <h1>
+            EMPREENDEDORISMO
+        </h1>
+        <p>COLÉGIO ESTADUAL DO PARANÁ - 2P</p>
+    </div>
+    </header>
+    <main>
+        <article>
+            <div class="texto">
+                <h1>O EMPREENDEDORISMO E SUA IMPORTÂNCIA</h1> <br>
+                <p>Empreendedorismo é o ato de criar um negócio ou vários negócios para gerar lucro. Mas, como uma definição básica de      empreendedorismo, essa é um pouco limitante.
+                    <br>
+                    <br>
+                    Uma definição mais moderna de empreendedorismo é dizer que empreender é transformar o mundo resolvendo grandes problemas.
+                    <br>
+                    <br>
+                    O empresário é, então, alguém capaz de identificar problemas e trabalhar para tornar a vida das pessoas mais fácil, inclusive a sua.
+                    <br>
+                    <br>
+                    Do ponto de vista de quem já empreende, o empreendedorismo pode ser considerado o que você pode fazer para colocar sua carreira e os seus sonhos em suas mãos e conduzi-los na direção que deseja.
+                    <br>
+                    <br>
+                    É sobre construir uma vida da sua própria maneira. Sem chefes. Sem restrições de horários.
+                    <br>
+                    <br>
+                    Ao mesmo tempo, os empreendedores também são capazes de dar o primeiro passo para tornar o mundo um lugar melhor para todos.</p>
+            </div>
+            <img src="Imagens/empreendorismo_foto.png" alt="Foto empreendedorismo">
+        </article> 
+    </main>
+    
+    <section id="formulario">
+        <h2>Em caso de dúvidas, preencha o formulário abaixo.</h2>
+        <form action="https://formspree.io/f/meqboypg" method="post">
+            
+            <div class="form">
+                <div class="name-email">
+                    <label for="nome">Seu Nome:</label>
+                    <input type="text" name="name" id="nome" placeholder=" Digite seu nome" required autocomplete="name" autofocus>
+                    <label for="email">Seu E-mail:</label>
+                    <input type="email" name="mail" id="email" placeholder=" Digite seu email" required autocomplete="email">
+                </div>
+                <div class="msg">
+                    <label for="mensagem">Sua Mensagem:</label>
+                    <textarea name="message" id="mensagem" cols="30" rows="10" placeholder="  Digite aqui sua mensagem" required minlength="5" maxlength="100" ></textarea>
+                </div>
+            </div>
+
+            <input type="submit" id="acionar" name="submeter" value="Enviar">
+    
+        </form>
+    </section>
+</main>
+<footer>
+    <p>Trabalho desenvolvido na disciplina de programação</p> 
+    <p class="cep"><img src="Imagens/logonova.png" alt="Logo-CEP"> <a href="https://www.cep.pr.gov.br/">Colégio Estadual do Paraná</a></p>
+</footer>

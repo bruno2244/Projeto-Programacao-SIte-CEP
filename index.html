@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Robótica - Grupo 2</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="shortcut icon" href="Imagens/logonova.png" type="image/x-icon">
+    <script>
+        window.onload = function() {
+            window.location.href = '#cabeçalho'; 
+        };
+    </script>
+</head>
+<body>
+    <header id="cabeçalho">
+    <div class="inicio">
+        <div class="menu">
+                <div class="menu-mobile">
+                    <div class="inicio-mobile">
+                        <img id="burger" src="Imagens/menu-aberto.png" alt="Menu" onclick="clickMenu()">
+                        <a href="https://www.cep.pr.gov.br/" target="_blank"><img id="logo" src="Imagens/logonova.png" alt="Logo-CEP"></a>
+                    </div>
+                    <div class="navbar">
+                        <nav>
+                            <ul class="menu-list">
+                                <li><a href="index.html">Robótica</a></li>
+                                <li><a href="empreendedorismo.html">Empreendedorismo</a></li>
+                                <li><a href="biotecnologia.html">Biotecnologia</a></li>
+                                <li><a href="programacao.html">Programação</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <nav class="bar">
+                    <ul class="menu-list">
+                        <li><a href="index.html">Robótica</a></li>
+                        <li><a href="empreendedorismo.html">Empreendedorismo</a></li>
+                        <li><a href="biotecnologia.html">Biotecnologia</a></li>
+                        <li><a href="programacao.html">Programação</a></li>
+                    </ul>
+                </nav>
+                <input type="search" placeholder=" 🔍 O que você procura?">
+        </div>
+    </div>
+    <script>
+        function clickMenu() {
+            
+            let navbar = document.querySelector('.navbar')
+            
+            if(navbar.style.display == 'block') {
+                
+                navbar.style.display = 'none'
+                
+            } else {
+                
+                navbar.style.display = 'block'
+            }
+    
+        }
+
+        
+       
+    </script>
+    <div class="titulo">
+        <h1>
+            PROJETO DE ROBÓTICA
+        </h1>
+        <p>COLÉGIO ESTADUAL DO PARANÁ - 2P</p>
+    </div>
+    </header>
+
+    <main>
+        <article>
+            <div class="texto">
+                <h1>O QUE É ROBÔTICA E ONDE É USADA</h1> <br>
+                <p>Robótica é um ramo educacional e tecnológico que trata de sistemas compostos por partes mecânicas automáticas em conjunto com circuitos integrados, tornando sistemas mecânicos motorizados controlados por circuitos elétricos e inteligência computacional. A robótica é objeto de estudo de diversas áreas: computação, aeroespacial, mecânica, automação, elétrica, etc.</p>
+            </div>
+            <img src="Imagens/Robotica_foto.jpg" alt="Foto robótica">
+        </article> 
+        
+        <section id="slides">
+            <h2>Acompanhe as Novidades</h2>
+            <div class="slide-list">
+                <ul class="lista-fotos" style="left: calc(-400%);">
+                    <li>
+                        <a href="index.html">
+                            <img class="redondo" src="Imagens/slide-1.png" alt="Slide Robótica">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="empreendedorismo.html">
+                            <img class="redondo" src="Imagens/slide-2.png" alt="Slide empreendedorismo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="biotecnologia.html">
+                            <img class="redondo" src="Imagens/slide-3.png" alt="Slide biotecnologia">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="programacao.html">
+                            <img class="redondo" src="Imagens/slide-4.png" alt="Slide programacao">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="bolinhas">
+                <input type="radio" class="slides-bolinha" name="bolinha" checked>
+                <input type="radio" class="slides-bolinha" name="bolinha">
+                <input type="radio" class="slides-bolinha" name="bolinha">
+                <input type="radio" class="slides-bolinha" name="bolinha">
+            </div>
+        </section>
+        <script>
+            
+        const slideControllers = document.querySelectorAll('.slides-bolinha');
+        const slidesList = document.querySelector('.lista-fotos');
+        let currentSlide = 0;
+
+        // Adicionar um evento de clique para cada controlador de slide
+        slideControllers.forEach((controller, index) => {
+            controller.addEventListener('click', () => {
+                currentSlide = index;
+                slidesList.style.left = `calc(${index} * -100%)`;
+            });
+        });
+
+        // Função para alterar os slides automaticamente após 20 segundos
+        function autoChangeSlide() {
+            currentSlide = (currentSlide + 1) % slideControllers.length;
+            slideControllers[currentSlide].checked = true;
+            slidesList.style.left = `calc(${currentSlide} * -100%)`;
+        }
+        // Definir um temporizador para alternar automaticamente os slides a cada 20 segundos (20000 milissegundos)
+        setInterval(autoChangeSlide, 10000);
+    
+        </script>
+        <section id="integrantes">
+            <h2>Integrantes:</h2>
+
+            <div class="int-1">
+                <figure>
+                    <img class="violeta" src="Imagens/Violeta-Kotinda.jpg" alt="Foto-Violeta-Kotinda">
+                    <figcaption>
+                        <strong>Violeta Kotinda</strong> <br>
+                        Prazer, sou a Violeta e faço parte do grupo **, fico muito feliz de estar em um grupo que todos se ajudam.
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="Imagens/Maria-Eduarda.jpg" alt="Foto-Maria-Eduarda">
+                    <figcaption>
+                        <strong>Maria Eduarda Palhares</strong> <br>
+                        Prazer, sou a Maria e faço parte do grupo **, fico muito feliz de estar em um grupo que todos se ajudam
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="int-2">
+                <figure>
+                    <img class="bruno" src="Imagens/Bruno-Henrique.jpg" alt="Foto-Bruno-Henrique">
+                    <figcaption>
+                        <strong>Bruno Henrique</strong> <br>
+                        Prazer, sou o Bruno e faço parte do grupo **, fico muito feliz de estar em um grupo que todos se ajudam
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="Imagens/Mayara-Barbosa.jpg" alt="Foto-Mayara-Barbosa">
+                    <figcaption>
+                        <strong>Mayara Barbosa</strong> <br>
+                        Prazer, sou a Mayara e faço parte do grupo **, fico muito feliz de estar em um grupo que todos se ajudam
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="Imagens/Giovanna-Nogueira.jpg" alt="Foto-Giovanna-Nogueira">
+                    <figcaption>
+                        <strong>Giovanna Nogueira</strong> <br>
+                        Prazer, sou a Giovanna e faço parte do grupo **, fico muito feliz de estar em um grupo que todos se ajudam
+                    </figcaption>
+                </figure>
+            </div>
+
+        </section>
+
+        <section id="formulario">
+            <h2>Em caso de dúvidas, preencha o formulário abaixo.</h2>
+            <form action="https://formspree.io/f/meqboypg" method="post">
+                
+                <div class="form">
+                    <div class="name-email">
+                        <label for="nome">Seu Nome:</label>
+                        <input type="text" name="name" id="nome" placeholder=" Digite seu nome" required autocomplete="name" autofocus>
+                        <label for="email">Seu E-mail:</label>
+                        <input type="email" name="mail" id="email" placeholder=" Digite seu email" required autocomplete="email">
+                    </div>
+                    <div class="msg">
+                        <label for="mensagem">Sua Mensagem:</label>
+                        <textarea name="message" id="mensagem" cols="30" rows="10" placeholder="  Digite aqui sua mensagem" required minlength="5" maxlength="100" ></textarea>
+                    </div>
+                </div>
+
+                <input type="submit" id="acionar" name="submeter" value="Enviar">
+        
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p class="text-footer">Trabalho desenvolvido na disciplina de programação</p> 
+        <p class="cep"><img src="Imagens/logonova.png" alt="Logo-CEP"> <a href="https://www.cep.pr.gov.br/">Colégio Estadual do Paraná</a></p>
+    </footer>
+</body>
+</html>
